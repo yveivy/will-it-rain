@@ -1,0 +1,49 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+
+}
+
+#page-container {
+    display: flex;
+}
+
+aside {
+    padding-left: 2%;
+    width: 15%;
+    float: left;
+}
+
+section {
+    width: 85%;
+    float: right;
+}
+
+:root {
+    box-sizing: border-box;
+    padding: 5, 5;
+    background-color: aliceblue;
+}
+h1 {
+    padding-top:5%;
+    text-align: center;
+}
+
+
+
+
+#weather-location {
+
+    place-content: center;
+}
+
+#page-container {
+   border-radius: 5%;
+}
+section {
+    background-color: aqua;
+
+}
+.temperature output {
+    background-color: aqua;
+
+}

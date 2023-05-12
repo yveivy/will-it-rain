@@ -13,49 +13,99 @@
     <header class="header">
         <h1>Will it Rain?</h1>
     </header>
-    <aside><input type="text" class="sidebar" id="input" placeholder="Enter City">
-        <button type="click" id="search">Search</button>
+    <aside class="sidebar">
+        <!-- <h1 id="city-weather"></h1> -->
+        <form id="searchForm"><input type="text" id="cityInput" placeholder="Enter City">
+            <button type="submit" id="searchButton">Search</button>
+        </form>
+    <div><h1 id="city-weather"></h1></div>
 
     </aside>
     <main id="page-container">
         <section class="current-conditions-output">
-            <div class="current-temp">
-                <div class="label">Current</div>
-                <span data-current-temp>31</span>&deg;
+            <div class="current-left">
+                <div class="label"></div>
+                <span data-current-temp>78</span>&deg;
             </div>
-            <div class="current-conditions-group"></div>
-                <div class="label">Feels Like</div>
-                <div><span data-current-feels>32</span>&deg;</div>
-            <div class="current-conditions-group">
-                <div class="label">Min</div>
-                 <div><span data-current-mih>32</span>&deg;</div>
+            <div class="current-right">
+                <div class="info-group">
+                    <div class="label">High</div>
+                    <div><span data-current-high>80</span>&deg;</div>
+                </div>
+                <div class="info-group">
+                    <div class="label">FL High</div>
+                    <div><span data-current-fl-high>79</span>&deg;</div>
+                </div>
+                <div class="info-group">
+                    <div class="label">Wind Speed</div>
+                    <div><span data-current-wind>11</span><span class="value-sub-info">mph</spa>
+                    </div>
+                </div>
+                <div class="info-group">
+                    <div class="label">Low</div>
+                    <div><span data-current-low>76</span>&deg;</div>
+                </div>
+                <div class="info-group">
+                    <div class="label">Pressure</div>
+                    <div><span data-current-pressure>1010</span><span class="value-sub-info">hPa</spa>
+                    </div>
+                </div>
+                <div class="info-group">
+                    <div class="label">Humidity</div>
+                    <div><span data-current-humidity>87</span>%</div>
+                </div>
             </div>
-            <div class="current-conditions-group">
-                <div class="label">Max</div>
-                 <div><span data-current-max>32</span>&deg;</div>
-            </div>
-            <div class="current-conditions-group">
-                <div class="label">Pressure</div>
-                 <div><span data-current-pressure>1019</span><span class="value-sub-info">hPa</spa></div>
-            </div>
-            <div class="current-conditions-group">
-                <div class="label">Humidity</div>
-                 <div><span data-current-humidity>70</span>%</div>
-            </div>
-            <div class="current-conditions-group">
-                <div class="label">Wind Speed</div>
-                 <div><span data-current-wind>32</span><span class="value-sub-info">mph</spa></div>
-            </div>
+
 
         </section>
-        <section class="forcast">
-
+        <section class="forecast" data-day-section>
+            <template id="day-card-template">
+                <div class="day-card">
+                    <div class="day-card-day" data-date></div>
+                    <div><span data-temp></span><span>&deg;<span></div>
+                </div>
+            </template>
+            <div class="day-card">
+                <div class="day-card-day">Monday</div>
+                <div>32&deg;</div>
+            </div>
+            <div class="day-card">
+                <div class="day-card-day">Tuesday</div>
+                <div>32&deg;</div>
+            </div>
+            <div class="day-card">
+                <div class="day-card-day">Wednesday</div>
+                <div>32&deg;</div>
+            </div>
+            <div class="day-card">
+                <div class="day-card-day">Thursday</div>
+                <div>32&deg;</div>
+            </div>
+            <div class="day-card">
+                <div class="day-card-day">Friday</div>
+                <div>32&deg;</div>
+            </div>
+            <div class="day-card">
+                <div class="day-card-day">Saturday</div>
+                <div>32&deg;</div>
+            </div>
+            <div class="day-card">
+                <div class="day-card-day">Sunday</div>
+                <div>32&deg;</div>
+            </div>
+            <template id="day-card-template">
+                <div class="day-card">
+                    <div class="day-card-day" data-date></div>
+                    <div><span data-temp></span><span>&deg;<span></div>
+                </div>
+            </template>
 
         </section>
 
 
 
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
